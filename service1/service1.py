@@ -34,7 +34,7 @@ def main():
 
     url = 'http://service2:8197/status'
     result = requests.get(url)
-    logstring+= "\n"+ result.text
+    logstring+=  result.text
     return Response(logstring, mimetype="text/plain")
 
 @app.route("/log")
