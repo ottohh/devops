@@ -1,0 +1,19 @@
+services:
+  service1:
+    build: ./service1
+    ports:
+      - "8199:8199"
+    volumes:
+    - .:/data
+  service2:
+    build: ./service2
+    volumes:
+      - .:/data
+  
+  storage:
+    build: ./storage
+    volumes:
+      - storage:/data
+
+volumes:
+  storage:

@@ -1,0 +1,15 @@
+LLM's were used in generating functionality to service1, service2 and storage.
+It was used like "Give me a C# which gives this kind of timestamp and appends it to file and posts to other service using IHttpClientFactory"
+Code was not fully working and had to be manually adjusted. Additional prompting was also needed for it.
+In service1 dockerfile I asked "What is the way to run flask app in production?".
+It gave me a pip install for gunicorn and the last line to run the app.
+In docker-compose.yml I tried to not use it, but copilot autocompleted the volume fields for me.
+I tried to troubleshoot problem with compose when i was getting
+"(base) PS C:\Users\ottop\devops> docker compose -f docker-compose.yml up -d --build 
+Compose can now delegate builds to bake for better performance.
+ To do so, set COMPOSE_BAKE=true.
+2025/09/10 11:36:09 http2: server: error reading preface from client //./pipe/dockerDesktopLinuxEngine: file has already been closed
+2025/09/10 11:36:09 http2: server: error reading preface from client //./pipe/dockerDesktopLinuxEngine: file has already been closed
+[+] Building 0.0s (0/0)                                                 docker:desktop-linux 
+unable to prepare context: path "C:\\Users\\ottop\\devops\\service2.Dockerfile""
+It could not help and I just reinstalled docker desktop.
