@@ -1,0 +1,9 @@
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                                         NAMES
+dd33742c5fdf   devops-storage    "gunicorn --bind 0.0…"   3 minutes ago   Up 3 minutes                                                 devops-storage-1
+dcc722738652   devops-service1   "gunicorn --bind 0.0…"   3 minutes ago   Up 3 minutes   0.0.0.0:8199->8199/tcp, [::]:8199->8199/tcp   devops-service1-1
+db2d0bb479a6   devops-service2   "dotnet Service2.Doc…"   3 minutes ago   Up 3 minutes                                                 devops-service2-1
+NETWORK ID     NAME             DRIVER    SCOPE
+5c3a3221cc18   bridge           bridge    local
+5bd05c2bf093   devops_default   bridge    local
+365c68c24d27   host             host      local
+b93dfd4c8faa   none             null      local
